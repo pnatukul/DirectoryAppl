@@ -12,7 +12,7 @@ protocol PeopleUseCase {
     func getImage(for url: String) async throws -> Data
 }
 
-final class DefaultPeopleUseCase{
+final class DefaultPeopleUseCase {
     private var peoplesRepository: PeoplesRepository
 
     init(peoplesRepository: PeoplesRepository) {
@@ -24,7 +24,7 @@ extension DefaultPeopleUseCase: PeopleUseCase {
     func getImage(for url: String) async throws -> Data {
         do {
             return  try await peoplesRepository.getImages(for: url)
-        }catch {
+        } catch {
             throw error
         }
     }
@@ -32,7 +32,7 @@ extension DefaultPeopleUseCase: PeopleUseCase {
     func execute() async throws -> [People] {
         do {
             return try await peoplesRepository.getPeoples()
-        }catch {
+        } catch {
           throw error
         }
     }

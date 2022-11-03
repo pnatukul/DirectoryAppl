@@ -17,5 +17,4 @@ class DirectoryAppUITestsLaunchTests: XCTestCase {
         continueAfterFailure = false
     }
 
-    
 }

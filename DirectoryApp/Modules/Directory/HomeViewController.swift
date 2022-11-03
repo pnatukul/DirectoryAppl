@@ -13,7 +13,6 @@ final class HomeViewController: UIViewController {
     
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Directory>
 
-    
     lazy var datasource: DataSource = {
         let dataSource = DataSource(
             collectionView: collectionView,
@@ -111,9 +110,8 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let lay = collectionViewLayout as! UICollectionViewFlowLayout
-        let widthPerItem = collectionView.frame.width / 2 - lay.minimumInteritemSpacing
-        
+        let lay = collectionViewLayout as? UICollectionViewFlowLayout
+        let widthPerItem = collectionView.frame.width / 2 - (lay?.minimumInteritemSpacing ?? 0)
         return CGSize(width:widthPerItem, height:150)
     }
 }

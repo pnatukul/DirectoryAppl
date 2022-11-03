@@ -11,7 +11,6 @@ final class PeoplesViewController: UIViewController, Alertable {
     typealias DataSource = UICollectionViewDiffableDataSource<Int, People>
     
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, People>
-
     
     lazy var datasource: DataSource = {
         let dataSource = DataSource(
@@ -124,9 +123,8 @@ extension PeoplesViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let lay = collectionViewLayout as! UICollectionViewFlowLayout
-        let widthPerItem = collectionView.frame.width / CGFloat(Constants.iPhoneColumnCount) - lay.minimumInteritemSpacing
-        
+        let lay = collectionViewLayout as? UICollectionViewFlowLayout
+        let widthPerItem = collectionView.frame.width / CGFloat(Constants.iPhoneColumnCount) - (lay?.minimumInteritemSpacing ?? 0)
         return CGSize(width:widthPerItem, height:150)
     }
 }

@@ -76,7 +76,6 @@ extension RoomsViewController {
         
         // TableView setup
         
-        
         tableView.register(RoomsTableViewCell.self, forCellReuseIdentifier:"Cell")
         
         tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant:0.0).isActive = true

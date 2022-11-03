@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UILabel {
-    static public func createLabel(text: String = "")-> UILabel {
+    static public func createLabel(text: String = "") -> UILabel {
         let label = UILabel()
          label.translatesAutoresizingMaskIntoConstraints = false
          label.textAlignment = .center

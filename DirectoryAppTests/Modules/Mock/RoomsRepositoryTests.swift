@@ -39,8 +39,8 @@ class RoomsRepositoryTests: XCTestCase {
         do {
             let _ = try await roomsRepository.getRooms()
 
-        }catch {
-            XCTAssertEqual(error as! APIError, APIError.jsonParsingFailed)
+        } catch {
+            XCTAssertEqual(error as? APIError, APIError.jsonParsingFailed)
         }
     }
     
@@ -52,8 +52,8 @@ class RoomsRepositoryTests: XCTestCase {
         do {
             let _ = try await roomsRepository.getRooms()
 
-        }catch {
-            XCTAssertEqual(error as! APIError, APIError.emptyRecords)
+        } catch {
+            XCTAssertEqual(error as? APIError, APIError.emptyRecords)
         }
     }
     
@@ -65,9 +65,8 @@ class RoomsRepositoryTests: XCTestCase {
         do {
             let _ = try await roomsRepository.getRooms()
 
-        }catch {
-            XCTAssertEqual(error as! APIError, APIError.invalidData)
+        } catch {
+            XCTAssertEqual(error as? APIError, APIError.invalidData)
         }
     }
 }
-

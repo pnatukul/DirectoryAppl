@@ -10,9 +10,9 @@ import UIKit
 
 extension UIStackView {
     static public func createStackView(axis:NSLayoutConstraint.Axis = .vertical,
-                                alignment: UIStackView.Alignment = .fill,
-                                distribution: UIStackView.Distribution = .fill
-    )-> UIStackView {
+                                       alignment: UIStackView.Alignment = .fill,
+                                       distribution: UIStackView.Distribution = .fill
+    ) -> UIStackView {
         let stackView = UIStackView()
         stackView.axis = axis
         stackView.translatesAutoresizingMaskIntoConstraints = false

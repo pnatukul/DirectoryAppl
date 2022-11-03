@@ -35,15 +35,14 @@ class RoomsUseCaseTests: XCTestCase {
 
     }
     
-    
     // when people records fail to fetch data
     func testGetPeopleFailure() async {
 
         do {
             _ =  try await roomsUseCase.execute()
 
-        }catch {
-            XCTAssertEqual(error as! APIError, .invalidData)
+        } catch {
+            XCTAssertEqual(error as? APIError, .invalidData)
 
         }
     }

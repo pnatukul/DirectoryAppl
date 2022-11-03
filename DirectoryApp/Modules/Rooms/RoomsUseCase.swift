@@ -22,7 +22,7 @@ extension DefaultRoomsUseCase: RoomsUseCase {
     func execute() async throws -> [Room] {
         do {
             return try await roomsRepository.getRooms()
-        }catch {
+        } catch {
           throw error
         }
     }

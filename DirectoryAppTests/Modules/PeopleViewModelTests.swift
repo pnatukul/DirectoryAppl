@@ -17,7 +17,6 @@ class PeopleViewModelTests: XCTestCase {
        
         let coordinator =  AppCoordinator(navController: UINavigationController())
         
-        
         viewModel = PeopleViewModel(peopleUseCase: peopleUseCase, coordinator: coordinator)
     }
 
@@ -38,7 +37,6 @@ class PeopleViewModelTests: XCTestCase {
         
     }
     
-    
     // getPeople Failed
     func testWhenGetPeopleIsFailed() async {
         
@@ -51,7 +49,6 @@ class PeopleViewModelTests: XCTestCase {
 
     }
     
-    
     // get downLoad image success
     func testGetPeopleAvatarIsSuccess() async {
         
@@ -60,14 +57,12 @@ class PeopleViewModelTests: XCTestCase {
         
         await viewModel.getPeoples()
 
-        
         // When
          viewModel.getPeopleImage(for:0, completion: { imageData in
             // Then
             XCTAssertNotNil(imageData)
         })
     }
-    
     
     // get downLoad image failed
     func testGetPeopleAvatarIsFailure() async {
@@ -76,7 +71,6 @@ class PeopleViewModelTests: XCTestCase {
         peopleUseCase.enqueuePeopelesRecords(peoplesRecords: [People(firstName:"test", avatar: "invalid", lastName: "test", email: "test", jobTitle: "test", joinedDate:"test")])
         
         await viewModel.getPeoples()
-
         
         // When
          viewModel.getPeopleImage(for:0, completion: { imageData in

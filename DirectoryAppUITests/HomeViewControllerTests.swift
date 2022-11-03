@@ -17,7 +17,6 @@ class HomeViewControllerTests: XCTestCase {
         app = XCUIApplication()
         app.launch()
 
-      
     }
 
     override func tearDownWithError() throws {
@@ -33,22 +32,18 @@ class HomeViewControllerTests: XCTestCase {
     func testHomeScreenCollectionViewExists() {
         let collectionViews = app.collectionViews
     
-        
         XCTAssertNotNil(collectionViews.firstMatch)
     }
 
-    
     func testNavigatesToPeopleScreen() {
         
         let collectionViewsQuery = app.collectionViews
-        collectionViewsQuery/*@START_MENU_TOKEN@*/.staticTexts["Peoples"]/*[[".cells.staticTexts[\"Peoples\"]",".staticTexts[\"Peoples\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+                collectionViewsQuery/*@START_MENU_TOKEN@*/.staticTexts["Peoples"]/*[[".cells.staticTexts[\"Peoples\"]",".staticTexts[\"Peoples\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         
-       
         let texts =  app.navigationBars["Peoples"].staticTexts
          
          XCTAssertEqual(texts.firstMatch.label, "Peoples")
     }
-    
     
     func testNavigatesToRoomsScreen() {
         
@@ -62,6 +57,4 @@ class HomeViewControllerTests: XCTestCase {
        
     }
  
-
-   
 }

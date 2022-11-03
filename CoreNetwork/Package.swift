@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "CoreNetwork",
-            targets: ["CoreNetwork"]),
+            targets: ["CoreNetwork"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -26,6 +26,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "CoreNetworkTests",
-            dependencies: ["CoreNetwork"]),
+            dependencies: ["CoreNetwork"])
     ]
 )

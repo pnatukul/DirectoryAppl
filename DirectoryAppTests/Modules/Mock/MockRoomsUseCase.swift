@@ -10,7 +10,6 @@ import XCTest
 import CoreNetwork
 @testable import DirectoryApp
 
-
 class MockRoomsUseCase: RoomsUseCase {
     var roomsRecords: [Room]?
     
@@ -25,4 +24,3 @@ class MockRoomsUseCase: RoomsUseCase {
         self.roomsRecords = roomsRecords
     }
 }
-

@@ -15,7 +15,7 @@ public enum APIError: Error {
     case jsonParsingFailed
     case invalidSearch
     
-    public var localizedDescription: String{
+    public var localizedDescription: String {
         switch self {
         case .emptyRecords:
             return NSLocalizedString("empty_response", comment:"")

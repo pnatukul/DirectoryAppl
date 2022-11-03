@@ -9,7 +9,6 @@ import XCTest
 import CoreNetwork
 @testable import DirectoryApp
 
-
 class PeopleUseCaseTests: XCTestCase {
 
     var peopleUseCase: PeopleUseCase!
@@ -34,19 +33,17 @@ class PeopleUseCaseTests: XCTestCase {
 
     }
     
-    
     // when people records fail to fetch data
     func testGetPeopleFailure() async {
 
         do {
             _ =  try await peopleUseCase.execute()
 
-        }catch {
-            XCTAssertEqual(error as! APIError, .invalidData)
+        } catch {
+            XCTAssertEqual(error as? APIError, .invalidData)
 
         }
     }
-    
     
     // when people get image success
     func testGetPeopleImageSuccess() async {

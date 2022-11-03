@@ -30,7 +30,7 @@ extension PeopleViewModel: PeopleViewModelAction {
 
 extension PeopleViewModel: PeopleViewModelInput {
     
-    func getPeopleImage(for index: Int, completion:@escaping (Data) -> Void)  {
+    func getPeopleImage(for index: Int, completion:@escaping (Data) -> Void) {
         Task {
             do {
                 let imageData =  try await peopleUseCase.getImage(for:peoples[index].avatar)
@@ -38,7 +38,7 @@ extension PeopleViewModel: PeopleViewModelInput {
                 DispatchQueue.main.async {
                     completion(imageData)
                 }
-            }catch {
+            } catch {
                 
             }
         }
@@ -52,8 +52,7 @@ extension PeopleViewModel: PeopleViewModelInput {
             view?.applySnapshot(animatingDifferences: true)
         } catch {
             view?.hideActivityIndicator()
-            view?.showError(message: (error as! APIError).localizedDescription)
+            view?.showError(message: (error as? APIError)?.localizedDescription ?? "error")
         }
     }
 }
-

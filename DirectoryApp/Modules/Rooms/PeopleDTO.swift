@@ -19,7 +19,7 @@ struct PeopleDTO: Codable {
     var favouriteColor: String?
     var id: String?
     
-    enum CodingKeys: String, CodingKey{
+    enum CodingKeys: String, CodingKey {
         case createdAt,firstName,avatar,email,lastName,favouriteColor,id
         case jobTitle = "jobtitle"
     }

@@ -8,7 +8,6 @@
 import XCTest
 @testable import DirectoryApp
 
-
 class RoomsViewModelTests: XCTestCase {
 
     var viewModel:RoomsViewModel!
@@ -43,7 +42,6 @@ class RoomsViewModelTests: XCTestCase {
 
     }
     
-    
     // getRooms Failed
     func testWhenGetPeopleIsFailed() async {
         
@@ -53,8 +51,6 @@ class RoomsViewModelTests: XCTestCase {
          await viewModel.getRooms()
 
         XCTAssertEqual(viewModel.rooms.count, 0)
-
         
     }
 }
-

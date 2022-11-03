@@ -8,7 +8,6 @@
 import Foundation
 import CoreNetwork
 
-
 final class DefaultRoomsRepository {
         
     private let networkManager: Networkable
@@ -17,7 +16,7 @@ final class DefaultRoomsRepository {
         self.networkManager = networkManager
     }
     
-    private func getDecodedResopnse(from data: Data)-> [RoomsDTO]? {
+    private func getDecodedResopnse(from data: Data) -> [RoomsDTO]? {
         guard let roomsResponceDTO = try? JSONDecoder().decode([RoomsDTO].self, from: data) else {
             return nil
         }
@@ -46,4 +45,3 @@ extension DefaultRoomsRepository: RoomsRepository {
         return roomsRecords
     }
 }
-

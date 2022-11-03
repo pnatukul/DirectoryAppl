@@ -68,7 +68,6 @@ final class PeopleDetailsViewController: UIViewController {
 
         parentStackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant:100.0).isActive = true
 
-
         [(nameLabel, nameValue), (emailLabel, emailValue), (jobLabel, jobValue), (joinedDateLabel, joinedDateValue)].forEach {  element in
 
             let stackView = createGroupStackView()
@@ -98,7 +97,7 @@ final class PeopleDetailsViewController: UIViewController {
 
     }
     
-    private func createGroupStackView()-> UIStackView {
+    private func createGroupStackView() -> UIStackView {
         return  UIStackView.createStackView(axis: .horizontal, alignment: .fill, distribution: .fill)
     }
 

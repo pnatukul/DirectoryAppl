@@ -29,7 +29,7 @@ final class RoomsTableViewCell: UITableViewCell {
     
     lazy var createdAtLabelName: UILabel = UILabel.createLabel(text:NSLocalizedString("created_at", comment: ""))
     
-    private func createGroupStackView()-> UIStackView {
+    private func createGroupStackView() -> UIStackView {
         return  UIStackView.createStackView(axis: .horizontal, alignment: .center, distribution: .fillEqually)
     }
     
@@ -52,7 +52,6 @@ final class RoomsTableViewCell: UITableViewCell {
         
         parentStackView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant:0.0).isActive = true
 
-        
         [(idLabelName, idLabel), (maxOccupancyLabelName, maxOccupancyLabel), (occupiedLabelName, occupiedLabel), (createdAtLabelName, createdAtLabel)].forEach {  element in
             
             let stackView = createGroupStackView()

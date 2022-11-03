@@ -9,7 +9,7 @@ import Foundation
 
 protocol HomeViewModelContract {
     var numberOfItems: Int { get }
-    func getDirectory(for index:Int)-> Directory
+    func getDirectory(for index:Int) -> Directory
 }
 
 final class HomeViewModel: HomeViewModelContract {
@@ -20,7 +20,7 @@ final class HomeViewModel: HomeViewModelContract {
         return directoreis.count
     }
     
-    func getDirectory(for index:Int)-> Directory {
+    func getDirectory(for index:Int) -> Directory {
         return directoreis[index]
     }
 }

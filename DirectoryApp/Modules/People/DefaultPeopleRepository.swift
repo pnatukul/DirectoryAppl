@@ -18,7 +18,7 @@ final class DefaultPeopleRepository {
         cache.countLimit = 100
     }
     
-    private func getDecodedResopnse(from data: Data)-> [PeopleDTO]? {
+    private func getDecodedResopnse(from data: Data) -> [PeopleDTO]? {
         guard let peopleResponceDTO = try? JSONDecoder().decode([PeopleDTO].self, from: data) else {
             return nil
         }

@@ -17,7 +17,7 @@ class MockNetworkManager: Networkable {
         
         if jsonFilePath == "imageDataValid" {
            return Data()
-        }else if(jsonFilePath == "imageDataInValid") {
+        } else if (jsonFilePath == "imageDataInValid") {
             throw APIError.invalidData
         }
         

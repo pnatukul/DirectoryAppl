@@ -31,7 +31,6 @@ final class PeopleCollectionViewCell: UICollectionViewCell {
         
         posterImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 0.0).isActive = true
         
-        
         posterImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0.0).isActive = true
         
         posterImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0.0).isActive = true
@@ -48,7 +47,7 @@ final class PeopleCollectionViewCell: UICollectionViewCell {
     }
     
     func configureData(people: People) {
-        nameLabel.text = people.firstName + people.lastName
+        nameLabel.text = people.firstName + " " + people.lastName
 
         posterImageView.clipsToBounds = true
     }

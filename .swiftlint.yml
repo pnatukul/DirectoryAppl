@@ -1,0 +1,8 @@
+disabled_rules: # rule identifiers turned on by default to exclude from running
+  - colon
+  - comma
+  - line_length
+  - trailing_whitespace
+  - redundant_discardable_let
+  - comment_spacing
+  - control_statement

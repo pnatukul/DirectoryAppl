@@ -30,8 +30,7 @@ extension RoomsViewModel: RoomsViewModelInput {
             view?.updateSnap()
         } catch {
             view?.hideActivityIndicator()
-            view?.showError(message: (error as! APIError).localizedDescription)
+            view?.showError(message: (error as? APIError)?.localizedDescription ?? "error")
         }
     }
 }
-

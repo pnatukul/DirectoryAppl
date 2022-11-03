@@ -20,7 +20,7 @@ public class NetworkManager: Networkable {
         do {
             let (data, _)  = try await URLSession.shared.data(for: request)
             return data
-        }catch {
+        } catch {
             throw APIError.invalidData
         }
     }
