@@ -73,7 +73,11 @@ final class RoomsTableViewCell: UITableViewCell {
         idLabel.text = room.id
         occupiedLabel.text = room.occupiedMessage
         maxOccupancyLabel.text = "\(room.maxOccupancy)"
- 
+        if occupiedLabel.text == "Occupied" {
+            occupiedLabel.textColor = .red
+        } else {
+            occupiedLabel.textColor = .green
+        }
         let isoDate = room.createdAt
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
