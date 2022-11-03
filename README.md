@@ -5,9 +5,9 @@ This is a directory app that allows staff to
 
 Check all the colleagues contact details. Check which rooms in the office are currently occupied. The app reads API's for people and rooms information to display. In People, first the image and name is displayed for all the staff in collection view and on clicking it navigates into detail screen of employee.
 
-![Screenshot1](./Screenshot1.png)
+![Screenshot1](./Screenshot/Screenshot1.png)
 
-![Screenshot2](./Screenshot2.png)
+![Screenshot2](./Screenshot/Screenshot2.png)
 
 In rooms, capacity and its occupancy status is displayed.
 
