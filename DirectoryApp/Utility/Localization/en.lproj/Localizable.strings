@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+ DirectoryApp
+
+ Created by Pradeepthi N on 2/11/2022.
+  
+*/
+
+// Values
+
+"name" = "Name";
+"email" = "Email";
+"job_title" = "Job Title";
+"joined_date" = "Joined Date";
+"id" = "Id";
+"occupied_status" = "Occupied Status";
+"max_occupancy" = "Max Occupancy";
+"created_at" = "Created At";
+
+// Titles
+
+"alert" = "Alert";
+"peoples" = "Peoples";
+"rooms" = "Rooms";
+"directory" = "Directory";
+
+
+// API Errors
+"empty_response" = "Empty Response";
+"request_failed" = "Request Failed";
+"invalid_data" = "Invalid Data";
+"response_unsucessful" = "Response Unsucessful";
+"invalid_search" = "Pls Enter Keyword To Search";
+"parsing_failed" = "Data Parsing Failed";
